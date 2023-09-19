@@ -1,12 +1,22 @@
-#include<stdio.h>
+ #include<stdio.h>
 void main()
 {
-    int a=0,b=1,c=0;
-    for(int c=0;c<=100;c++)
+    int num,count=0;
+    printf("Enter your number ");
+    scanf("%d",&num);
+    for(int i=1;i<=num;i++)
     {
-       printf("%d  ",a);
-       c=a+b;
-       a=b;
-       b=c;
+    if(num%i==0)
+    {
+        count++;
+    }
+    }
+    if(count==2)
+    {
+        printf("%d:- Number is Prime ",num);
+    }
+    else
+    {
+         printf("%d:- Number is Not Prime ",num);
     }
 }
